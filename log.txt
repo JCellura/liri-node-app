@@ -1,0 +1,29 @@
+{
+  "Artist": "Ace of Base",
+  "Track": "The Sign",
+  "Album": "Greatest Hits",
+  "MP3": "https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=40408811cad243b8adebe9f326333e48"
+}{
+  "Artist": "\"JAY Z\"",
+  "Track": "\"Big Pimpin' / Papercut\"",
+  "Album": "\"Collision Course (Deluxe Version)\"",
+  "MP3": "\"https://p.scdn.co/mp3-preview/8838b21192b457beb2ee18fe8610b6e81448d696?cid=40408811cad243b8adebe9f326333e48\""
+}
+
+
+
+User Command: node liri.js my-tweets
+
+LIRI Response:
+
+------------------------
+User Tweets:
+------------------------
+
+Created on: Thu Mar 29 20:08:56 +0000 2018
+Tweet content: Hello Twitter! #myfirstTweet
+------------------------
+Created on: Thu Mar 29 20:08:43 +0000 2018
+Tweet content: @Browns are the best
+------------------------
+
