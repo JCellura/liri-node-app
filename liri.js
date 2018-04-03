@@ -2,7 +2,7 @@
 // var keys = require('./keys.js'); 
 // var Spotify = require('node-spotify-api');
 var Twitter = require('twitter'); 
-// var request = require('request');
+var request = require('request');
 // var fs = require('fs')
 
 require("dotenv").config();
@@ -76,7 +76,10 @@ function retrieveTweets() {
 };
 
 if (liriCommand === 'my-tweets') {
-	retrieveTweets();}
+  retrieveTweets();}
+  
+else if (liriCommand === `movie-this`) {
+  retrieveOMDBInfo(liriArg);}
 
 if (process.argv[2] === "spotify-this-song") {
 
@@ -145,5 +148,74 @@ if (process.argv[2] === "spotify-this-song") {
         }
       });
     });
-  }
+  };
+};
+
+function retrieveOMDBInfo(movie) {
+    // Append the command to the log file
+    fs.appendFile('./log.txt', 'User Command: node liri.js movie-this ' + movie + '\n\n', (err) => {
+        if (err) throw err
+    });
+
+    // If no movie is provided, defaults to Mr. Nobody
+    var search;
+    if (movie === "") {
+        search = "Mr. Nobody";
+    } else {search = movie;}
+
+    // Replace spaces with '+' for the query search
+    search = search.split(" ").join("+");
+
+    // Construct the query string
+    var queryString = 'http://www.omdbapi.com/?t=' + search + "&y=&plot=short&apikey=trilogy";
+   
+    // Send the request to OMDB;
+    request(queryString, function(error, response, body) {
+
+        if (error) {
+            var errorStr1 = "ERROR: Retreiving OMDB entry -- " + error;
+           
+            fs.appendFile('./log.txt', errorStr1, (err) => {
+                if (err) throw err;
+                console.log(errorStr1);
+            });
+            return;
+
+        } else {
+            var data = JSON.parse(body);
+            
+            if (!data.Title && !data.Released && !data.imdbRating) {
+                var errorStr2 = "Error: No movie info found, please check entry!" + search;
+
+                // Append the error to the log file
+                fs.appendFile('./log.txt', errorStr2, (err) => {
+                    if (err) throw err;
+                    console.log(errorStr2);
+                });
+                return;
+
+            } else {
+                // Nicely Print The Movie Info
+                var outputStr = '--------------\n' +
+                                'Movie Information:\n' +
+                                '-----------------------\n\n' +
+                                'Movie Title: ' + data.Title + '\n' +
+                                'Year Released: ' + data.Released + '\n' +
+                                'IMDB Rating: ' + data.imdbRating + '\n' +
+                                'Country Produced: ' + data.Country + '\n' +
+                                'Language: ' + data.Language + '\n' +
+                                'Plot: ' + data.Plot + '\n' +
+                                'Actors: ' + data.Actors + '\n' +
+                                'Rotten Tomatoes Rating: ' + data.tomatoRating + '\n' +
+                                'Rotten Tomatoes URL: ' + data.tomatoURL + '\n';
+                
+                // Append the output to the log file
+               fs.appendFile("./log.txt", "Liri Response: \n\n" + outputStr + "\n", (err) => {
+                    if (err) throw err;
+                    console.log(outputStr);
+               });
+
+            }
+        }
+    });
 }

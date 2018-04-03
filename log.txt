@@ -27,3 +27,171 @@ Created on: Thu Mar 29 20:08:43 +0000 2018
 Tweet content: @Browns are the best
 ------------------------
 
+User Command: node liri.js my-tweets
+
+LIRI Response:
+
+------------------------
+User Tweets:
+------------------------
+
+Created on: Thu Mar 29 20:08:56 +0000 2018
+Tweet content: Hello Twitter! #myfirstTweet
+------------------------
+Created on: Thu Mar 29 20:08:43 +0000 2018
+Tweet content: @Browns are the best
+------------------------
+
+{
+  "Artist": "\"Led Zeppelin\"",
+  "Track": "\"Stairway To Heaven\"",
+  "Album": "\"Led Zeppelin IV (Deluxe Edition)\"",
+  "MP3": "\"https://p.scdn.co/mp3-preview/8226164717312bc411f8635580562d67e191a754?cid=40408811cad243b8adebe9f326333e48\""
+}ERROR: Retreiving OMDB entry -- nullERROR: Retreiving OMDB entry -- nullERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this 
+
+ERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this 
+
+ERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this godfather 
+
+ERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this godfather 
+
+ERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this 
+
+User Command: node liri.js movie-this 
+
+Error: No movie info found, please check entry!User Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!User Command: node liri.js movie-this godfather 
+
+ERROR: Retreiving OMDB entry -- nullUser Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!User Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!godfather+User Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!godfather User Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!godfather undefinedundefinedUser Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!godfather [object Object]User Command: node liri.js movie-this godfather 
+
+Error: No movie info found, please check entry!godfather [object Object]User Command: node liri.js movie-this godfather 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: Godfather
+Year Released: 15 Nov 1991
+IMDB Rating: 8.5
+Country Produced: India
+Language: Malayalam
+Plot: Two youngsters from rival clans fall in love.
+Actors: N.N. Pillai, Mukesh, Kanaka, Philomina
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
+User Command: node liri.js movie-this scarface 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: Scarface
+Year Released: 09 Dec 1983
+IMDB Rating: 8.3
+Country Produced: USA
+Language: English, Spanish
+Plot: In Miami in 1980, a determined Cuban immigrant takes over a drug cartel and succumbs to greed.
+Actors: Al Pacino, Steven Bauer, Michelle Pfeiffer, Mary Elizabeth Mastrantonio
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
+User Command: node liri.js movie-this the godfather 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: The Godfather
+Year Released: 24 Mar 1972
+IMDB Rating: 9.2
+Country Produced: USA
+Language: English, Italian, Latin
+Plot: The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+Actors: Marlon Brando, Al Pacino, James Caan, Richard S. Castellano
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
+User Command: node liri.js movie-this bad boys 2 
+
+Error: No movie info found, please check entry!bad+boys+2+[object Object]User Command: node liri.js movie-this bad boys 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: Bad Boys
+Year Released: 07 Apr 1995
+IMDB Rating: 6.8
+Country Produced: USA
+Language: English
+Plot: Two hip detectives protect a witness to a murder while investigating a case of stolen heroin from the evidence storage room from their police precinct.
+Actors: Lisa Boyle, Will Smith, Martin Lawrence, Michael Taliferro
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
+{
+  "Artist": "Ace of Base",
+  "Track": "The Sign",
+  "Album": "Greatest Hits",
+  "MP3": "https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=40408811cad243b8adebe9f326333e48"
+}{
+  "Artist": "\"Volbeat\"",
+  "Track": "\"Heaven Nor Hell\"",
+  "Album": "\"Beyond Hell / Above Heaven\"",
+  "MP3": "null"
+}User Command: node liri.js movie-this blackhawk down 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: The True Story of Blackhawk Down
+Year Released: 03 Jun 2003
+IMDB Rating: 7.9
+Country Produced: USA
+Language: English
+Plot: Real footage is shown to prove that the film Black Hawk Down (2001) was very true to the real events that occured in Mogadishu in 1993. Actual militia and US rangers are interviewed to tell...
+Actors: David Jeremiah, Hussein Aidid, Steve Anderson, Lee Van Arsdale
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
+User Command: node liri.js movie-this Black Hawk Down 
+
+Liri Response: 
+
+--------------
+Movie Information:
+-----------------------
+
+Movie Title: Black Hawk Down
+Year Released: 18 Jan 2002
+IMDB Rating: 7.7
+Country Produced: USA, UK
+Language: English, Somali, Arabic
+Plot: 160 elite U.S. soldiers drop into Somalia to capture two top lieutenants of a renegade warlord and find themselves in a desperate battle with a large force of heavily-armed Somalis.
+Actors: Josh Hartnett, Ewan McGregor, Tom Sizemore, Eric Bana
+Rotten Tomatoes Rating: undefined
+Rotten Tomatoes URL: undefined
+
